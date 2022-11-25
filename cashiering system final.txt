@@ -30,14 +30,6 @@ total_price3=0
 total_price4=0
 total_price5=0
 
-#triggers to prevent asking for another input incase a stock runs out 
-trigger1 = 0
-trigger2 = 0 
-trigger3 = 0 
-trigger4 = 0 
-trigger5 = 0 
-
-
 item = input(f"""
 
 Select your order:
@@ -204,6 +196,21 @@ Product		             Price		        Stocks Available
 5. Koolers (Mango Flav.)  15                       {koolers}
 
 Enter your order: """)
+        while item != "1" and item != "2" and item != "3" and item != "4" and item != "5":
+            print ("Invalid input, Please try again")
+            item = input(f"""
+        
+        \n\nSelect your order
+Product		             Price		        Stocks Available
+1. Tissue                 20                       {tissue}
+2. Apple                  15                       {apple}
+3. Yellow pad             25                       {yellow_pad}
+4. White Board Marker     25                       {marker}
+5. Koolers (Mango Flav.)  15                       {koolers}
+
+Enter your order: """)
+    
+
 #order summary
     elif order == "n":
         print (f"\n\nAMOUNT TO BE PAID: {AllTotal}")
